@@ -1,0 +1,63 @@
+  h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2em;
+      text-align: center;
+  }
+
+  .button-nice {
+      background-color: #38bbfc;
+      border: 2px solid #118fc1;
+      font-size: 1.5em;
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: white;
+      transition: .1s ease-in-out;
+      box-shadow: 0px 5px #118fc1;
+      font-family: 'Caveat Brush', cursive;
+      display: block;
+      margin: auto;
+      width: 100%;
+      text-align: center;
+  }
+
+  .button-nice:active {
+      box-shadow: 0px 1px #116782;
+      font-size: 1.4em;
+      transform: translate(2px, 3px);
+      background-color: #118fc1;
+  }
+
+  .button-nice:hover {
+      text-decoration: none;
+      color: #116782;
+  }
+
+  .button-nice-active {
+      box-shadow: 0px 1px #116782;
+      font-size: 1.4em;
+      transform: translate(2px, 3px);
+      background-color: #118fc1;
+  }
+
+  #quote {
+      font-size: 5em;
+      font-family: 'Pacifico', cursive;
+      color: #116782;
+  }
+
+  #quoted {
+      font-size: 2em;
+      color: #58b1c6;
+      font-family: 'Caveat Brush', cursive;
+  }
+
+  .box {
+      margin: 15vh 0 10vh 0;
+      text-align: center;
+  }
+
+  .fixed {
+      position: fixed;
+      width: 100%;
+      bottom: 5vh;
+  }
