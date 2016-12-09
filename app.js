@@ -2,7 +2,7 @@
     var quote = "";
     var quoted = "";
 
-$("#getQuoteButton").click(function getQuote(){ $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
+$("#getQuoteButton").click(function getQuote(){ $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
 
     quote = a[0].content;
     quoted = a[0].title;
