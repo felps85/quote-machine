@@ -2,10 +2,10 @@
     var quote = "";
     var quoted = "";
 
-$("#getQuoteButton").click(function getQuote(){ $.getJSON("https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?", function(a) {
+$("#getQuoteButton").click(function getQuote(){ $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
 
-    quote = a.quoteText;
-    quoted = a.quoteAuthor;
+    quote = a[0].content;
+    quoted = a[0].title;
 
 
 $("#quote").html(quote);
@@ -39,6 +39,3 @@ $("#getQuoteButton").toggleClass("button-nice-active");
 $("#share").toggleClass("button-nice-active");
 };
 });
-
-
-  
