@@ -2,10 +2,12 @@
     var quote = "";
     var quoted = "";
 
-$("#getQuoteButton").click(function getQuote(){ $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
+$("#getQuoteButton").click(function getQuote(t){
+    t.preventDefault();
+     $.getJSON("https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en", function(a) {
 
-    quote = a[0].content;
-    quoted = a[0].title;
+       quote = a.quoteText;
+       quoted = a.quoteAuthor;
 
 
 $("#quote").html(quote);
