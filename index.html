@@ -9,55 +9,43 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Pacifico" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <div class="container-fluid">
+    <main class="app-shell">
+        <div class="bg-layer"></div>
+        <section class="quote-stage">
+            <p class="eyebrow">Quote Machine</p>
 
+            <p id="quote">Get a quote with the button or press space</p>
 
-        <div class="row">
-            <div class="col-xs-12 box">
+            <article class="author-card">
+                <img id="authorAvatar" src="" alt="" />
+                <div class="author-meta">
+                    <p id="quoted">Unknown</p>
+                    <p id="authorOccupation">Thinker</p>
+                </div>
+                <a id="authorLink" class="author-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Learn more about this quote">↗</a>
+            </article>
 
-                <p id="quote">Get a quote with the button or press space</p>
-                <p id="quoted">Tweet us with the button or press T!</p>
-
+            <div class="actions">
+                <a id="share" target="_blank" class="twitter-share-button button-nice button-secondary" href="https://twitter.com/intent/tweet?text=">Share on X (T)</a>
+                <button class="button-nice" id="getQuoteButton">Generate Quote (Space)</button>
             </div>
-        </div>
-
-        <div class="row fixed">
-            <div class="col-md-4">
-                <h1>Quote Machine Generator</h1>
-            </div>
-            <div class="col-md-6">
-
-                <button class="button-nice" id="getQuoteButton">Get a new quote (space)</button>
-
-            </div>
-            <div class="col-md-2">
-
-                <a id="share" target="_blank" class="twitter-share-button button-nice" href="https://twitter.com/intent/tweet?text=">Tweet (T)</a>
-
-            </div>
-        </div>
-
-    </div>
+        </section>
+    </main>
 
     <script src="app.js" ></script>
-        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-        integrity = "sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-        crossorigin = "anonymous" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

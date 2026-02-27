@@ -1,63 +1,185 @@
-  h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: 2em;
-      text-align: center;
-  }
+:root {
+  --bg-base: #eceef2;
+  --text: #111111;
+  --card: rgba(255, 255, 255, 0.72);
+  --card-border: rgba(255, 255, 255, 0.6);
+  --c1: #7dd3fc;
+  --c2: #fca5a5;
+  --c3: #86efac;
+}
 
-  .button-nice {
-      background-color: #38bbfc;
-      border: 2px solid #118fc1;
-      font-size: 1.5em;
-      padding: 10px 20px;
-      border-radius: 10px;
-      color: white;
-      transition: .1s ease-in-out;
-      box-shadow: 0px 5px #118fc1;
-      font-family: 'Caveat Brush', cursive;
-      display: block;
-      margin: auto;
-      width: 100%;
-      text-align: center;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  .button-nice:active {
-      box-shadow: 0px 1px #116782;
-      font-size: 1.4em;
-      transform: translate(2px, 3px);
-      background-color: #118fc1;
-  }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background: var(--bg-base);
+}
 
-  .button-nice:hover {
-      text-decoration: none;
-      color: #116782;
-  }
+.app-shell {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
 
-  .button-nice-active {
-      box-shadow: 0px 1px #116782;
-      font-size: 1.4em;
-      transform: translate(2px, 3px);
-      background-color: #118fc1;
+.bg-layer {
+  position: absolute;
+  inset: -20%;
+  filter: blur(70px) saturate(120%);
+  background:
+    radial-gradient(circle at 15% 25%, var(--c1) 0%, transparent 48%),
+    radial-gradient(circle at 80% 20%, var(--c2) 0%, transparent 48%),
+    radial-gradient(circle at 55% 82%, var(--c3) 0%, transparent 52%);
+  transition: background 0.7s ease;
+}
+
+.quote-stage {
+  width: min(1080px, 100%);
+  z-index: 1;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(17, 17, 17, 0.75);
+}
+
+#quote {
+  margin: 0;
+  font-size: clamp(2rem, 6.7vw, 6.2rem);
+  line-height: 1.03;
+  font-weight: 800;
+  max-width: 16ch;
+  text-wrap: balance;
+}
+
+.author-card {
+  margin-top: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.45rem 0.55rem;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+}
+
+#authorAvatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.author-meta p {
+  margin: 0;
+}
+
+.author-meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+#quoted {
+  font-size: 0.96rem;
+  font-weight: 800;
+}
+
+#authorOccupation {
+  margin-top: 0.1rem;
+  font-size: 0.78rem;
+  color: rgba(17, 17, 17, 0.72);
+}
+
+.author-link {
+  margin-left: 0.2rem;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #111111;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(17, 17, 17, 0.15);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.author-link:hover {
+  background: rgba(17, 17, 17, 0.9);
+  color: #ffffff;
+}
+
+.actions {
+  margin-top: 1.15rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.button-nice {
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.2s ease;
+}
+
+#getQuoteButton {
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #111111;
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.75);
+  color: #111111;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.button-nice:hover {
+  opacity: 0.9;
+}
+
+.button-nice-active {
+  transform: translateY(2px);
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 1.3rem;
   }
 
   #quote {
-      font-size: 5em;
-      font-family: 'Pacifico', cursive;
-      color: #116782;
+    max-width: 100%;
+    font-size: clamp(2rem, 11vw, 3.9rem);
   }
 
-  #quoted {
-      font-size: 2em;
-      color: #58b1c6;
-      font-family: 'Caveat Brush', cursive;
+  .actions {
+    width: 100%;
   }
 
-  .box {
-      margin: 15vh 0 10vh 0;
-      text-align: center;
+  .button-nice {
+    width: 100%;
+    text-align: center;
   }
-
-  .fixed {
-      position: fixed;
-      width: 100%;
-      bottom: 5vh;
-  }
+}
